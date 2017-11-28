@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+.featuresText {
+  color: lightgrey;
+  font-weight: 900;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  #background-image: url('../pink dust.png');
+}
+
+img.arrow {
+  display: block;
+  height: 60px;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-header {
+  padding-top: 80px;
+  background-color: #fc8e3a;
+  text-align: center;
+  height: 650px;
+  background-image: url('../averie.jpg');
+  background-size: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  text-shadow: 2px 2px 1px #222;
+}
+
+.primary-content, 
+.secondary-content {
+  margin: auto;
+  width: 60%;
+}
+
+.lista{
+  text-align: justify;
+  color:lightgrey;
+  font-weight: 800;
+  list-style: none;
+}
+
+.cadModel {
+  width: 51%;
+  float:left;
+}
+
+.orphan{
+  margin: auto;
+  border-radius: 10px;
+}
+
+h1 {  
+   text-shadow: 2px 2px 1px #222;
+  font-size: 5.625em;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-size: 53px;
+}
+
+h3 {
+  font-size: 20px;
+  color: white;
+}
+
+.secondary-content {
+  margin-top: 100px;
+}
+
+.primary-content {
+  text-align: center;
+}
+
+.cadModel2 {
+  width: 46.5%;
+  float:right;
+ 
+}
+
+.fixFloat:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mainFeatures {
+  color: #db8543;
+  background-color: #434a52;
+  border-top: solid 10px #ffa949;
+  padding: 0px 120px 190px;
+  margin: 105px 0px 60px;
+  background-image: url('../plates.jpg');
+  background-size: cover; 
+  box-shadow: inset 0 0 50px 10px rgba(0, 0, 0, 1);
+  border-radius: 10px;
+}
+
+.callout {
+  font-size: 1.24em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+#main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: solid 10px orange;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+  
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+

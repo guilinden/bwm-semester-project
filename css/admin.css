@@ -1,0 +1,126 @@
+#main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: solid 10px orange;
+}
+
+.adminBtn {
+	margin-left: 10px;
+	margin-right: 10px;
+	-webkit-border-radius: 6;
+	-moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 20px;
+	background: #ffa500;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.adminBtn:hover {
+	background: lightgrey;
+}
+
+.logout {
+	margin-left: 10px;
+	margin-right: 10px;
+	-webkit-border-radius: 6;
+    -moz-border-radius: 6;
+	border-radius: 6px;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 20px;
+	background: red;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+
+.logout:hover{
+	background: lightgrey;
+}
+
+.separator {
+	display: inline;
+	color: orange;
+}
+
+.pages {
+	color:orange;
+}
+		
+.tabela {
+	display: none;
+	padding-top: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 70%;
+}
+
+td {
+	border: 4px solid white;
+}
+
+tr:nth-child(odd) {
+	background-color: lightgrey;
+}
+
+th {
+	border: 4px solid white;
+	background-color: orange;
+	height: 40px;
+	color: white;
+}
+
+.sendOrder{
+	color: #29ed25;
+}
+
+.openOrder {
+	color: red;
+}
+
+.material-icons{
+	color: #29ed25;
+	font-size: 36px;
+}
+
+.message {
+	margin-top: -10px;
+	padding-top: 70px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	text-align: center;
+	border:2px solid orange;
+}
+
+.reply {
+  background: #3ccf02;
+  background-image: -webkit-linear-gradient(top, #3ccf02, #009111);
+  background-image: -moz-linear-gradient(top, #3ccf02, #009111);
+  background-image: -ms-linear-gradient(top, #3ccf02, #009111);
+  background-image: -o-linear-gradient(top, #3ccf02, #009111);
+  background-image: linear-gradient(to bottom, #3ccf02, #009111);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.reply:hover {
+  background: #47f53d;
+  background-image: -webkit-linear-gradient(top, #47f53d, #07d414);
+  background-image: -moz-linear-gradient(top, #47f53d, #07d414);
+  background-image: -ms-linear-gradient(top, #47f53d, #07d414);
+  background-image: -o-linear-gradient(top, #47f53d, #07d414);
+  background-image: linear-gradient(to bottom, #47f53d, #07d414);
+  text-decoration: none;
+}

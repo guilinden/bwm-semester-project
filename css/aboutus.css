@@ -1,0 +1,50 @@
+#main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: solid 10px orange;
+}
+
+body{
+	font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;			
+}
+
+p {
+	color: #878787
+}
+
+.whoAreWe {
+	padding-top: 60px;
+	margin: auto;
+	width: 60%;
+	text-align: center;
+}
+
+figure {
+	display: inline-block;
+}
+
+figure img {
+	vertical-align: top;
+}
+
+figure figcaption {
+	text-align: center;
+}
+
+figcaption{
+	padding-top: 10px;
+}
+
+.category {
+	padding-top: 40px;
+	max-width:100%;
+	text-align:center;
+}
+
+.teamImage{
+	display: inline-block;		
+}
+
+img{
+	border-radius: 50%;
+}
