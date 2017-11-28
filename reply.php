@@ -2,6 +2,10 @@
 	include_once 'database/database.php';
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
+	require '../phpmailer/src/Exception.php';
+	require '../phpmailer/src/PHPMailer.php';
+	require '../phpmailer/src/SMTP.php';
+
 	session_start();
 
 	if(isset($_SESSION['user'])){
@@ -19,10 +23,12 @@
 	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	<div align="center" class="tabela">
-		<a href="admin.php" class="adminBtn">Admin Panel</a>
+	<div align="center" class="adminButtons">
+		<a href="admin.php" class="adminBtn" >Admin Panel</a>
 		<a href="logout.php" class="logout">Logout</a>
 	</div>
+
+	<form method="post">
 	<div class="message" id="message">
 	<?php
 		$connection = mysql_connect(HOST,USER,PASS) or die('Error connecting to MySQL server.');
@@ -43,38 +49,42 @@
 		    Print '<h2>Email: ' . $row['EMAIL'] . '</h2>';
 		    Print '<h3>Message</h3>';
 			Print '<p>' . $row['MESSAGE'] . '</p>';   
+			$messageBody = $row['MESSAGE'];
 		}
 
 	?>
 	<h3>Reply</h3>
 	<textarea></textarea>
 	<br><button type="submit" name="enviar" class="reply">Reply</button>
+	</form>
 	</div>
 
 	<?php
-		$mail = new PHPMailer();
+		if(isset($_POST['enviar'])){	
+			$mail = new PHPMailer();
+			$mail->IsSMTP(true); 
+			$mail->Host = "smtp.gmail.com";
+			$mail->Port = 587;
+			$mail->SMTPAuth = true; 
+			$mail->SMTPSecure = 'tls';
+			$mail->Username = 'username@domain.com';
+			$mail->Password = 'password'; 
+			$mail->setFrom('lindengui@gmail.com', 'BWM Team');
+	    	$mail->addAddress(''. $email, 'Guilherme Linden'); 
+			$mail->isHTML(true);
+			$mail->Subject  = "Reply to contact";
+			$mail->Body = "<p>" . $messageBody . "</p>";
+			$mail->AltBody = "" . $messageBody . "";
 
-		$mail->IsSMTP(true); 
-		$mail->Host = "smtp.gmail.com";
-		$mail->Port = 587;
-		$mail->SMTPAuth = true; 
-		$mail->SMTPSecure = 'tls';
-		$mail->Username = 'username@domain.com';
-		$mail->Password = 'password'; 
-		$mail->setFrom('lindengui@gmail.com', 'BWM Team');
-    	$mail->addAddress(''. $email, 'Guilherme Linden'); 
-		$mail->isHTML(true);
-		$mail->Subject  = "Order confirmation BWM";
-		$mail->Body = "Order confirmed on the value of $" . $price . "<br>This is your order id: " . $id . "<br>Thank you for your order :)";
-		$mail->AltBody = "Order confirmed on the value of $" . $price . "\r\n This is your order id: " . $id ."Thank you for your order! \r\n :)";
+			if (!$mail->send()) {
+				echo"<script language='javascript' type='text/javascript'>alert('An error occurred');window.location.href='admin.php';</script>";
+			} 
+			else{
+				echo"<script language='javascript' type='text/javascript'>alert('Message sent! :)');window.location.href='admin.php';</script>";
+			}
 
-		if (!$mail->send()) {
-			echo"<script language='javascript' type='text/javascript'>alert('An error occurred');window.location.href='index.php';</script>";
-		} 
-		else{
-			echo"<script language='javascript' type='text/javascript'>alert('Purchase confirmed, details were sent by 	email');window.location.href='index.php';</script>";
+			
 		}
-
 	?>
 
 <style type="text/css">

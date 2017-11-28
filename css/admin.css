@@ -88,7 +88,7 @@ th {
 }
 
 .message {
-	margin-top: -10px;
+	margin-top: -20px;
 	padding-top: 70px;
 	padding-bottom: 20px;
 	margin-left: auto;
@@ -123,4 +123,8 @@ th {
   background-image: -o-linear-gradient(top, #47f53d, #07d414);
   background-image: linear-gradient(to bottom, #47f53d, #07d414);
   text-decoration: none;
+}
+
+.adminButtons{
+	margin-top: 30px;
 }
